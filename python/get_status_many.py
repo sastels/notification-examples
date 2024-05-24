@@ -12,7 +12,7 @@ if __name__ == "__main__":
     hostname = "https://api.notification.canada.ca/"
     
     status = requests.get(
-        f"{hostname}/v2/notifications?include_jobs=true",  # <---------- undocumented include_jobs=true param needed
+        f"{hostname}/v2/notifications?include_jobs=true",  # <-- undocumented param needed
         headers={"Authorization": f"ApiKey-v1 {os.getenv('API_KEY')}"},
     )
 

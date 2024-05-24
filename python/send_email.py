@@ -28,18 +28,17 @@ if __name__ == "__main__":
     )
 
 
-    # # Always check the response
+    # Always check the response
     # print(f"responds status code: {response.status_code}")
     # print(json.dumps(response.json(), indent=4, sort_keys=True))
 
 
-
-    # # Check status    
+    # Check status
     # status = requests.get(
     #     response.json()["uri"],
     #     headers={"Authorization": f"ApiKey-v1 {os.getenv('API_KEY')}"},
     # )
-
+    # print("\n\nEmail Status")
     # print(f"responds status code: {status.status_code}")
     # print(json.dumps(status.json(), indent=4, sort_keys=True))
 
