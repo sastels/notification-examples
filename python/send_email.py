@@ -33,7 +33,16 @@ if __name__ == "__main__":
     # print(json.dumps(response.json(), indent=4, sort_keys=True))
 
 
-    # Check status
+
+
+
+
+
+
+
+
+
+    # Check status - better to setup a callback though
     # status = requests.get(
     #     response.json()["uri"],
     #     headers={"Authorization": f"ApiKey-v1 {os.getenv('API_KEY')}"},

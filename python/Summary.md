@@ -14,11 +14,13 @@
 
 - You might have made a mistake.
 - Notify might be rate limiting you.
+- You might be over your daily limit. <--- happens a lot!
 - Notify might be having problems :O
 
 ## You should also check the end status of messages!
 - Lots of errors in email addresses and phone numbers.
 - Text messages sometimes just disappear inside the provider.
+- Setting up a callback is usually the best way.
 
 
 ## Be able to handle Notify returning error messages
