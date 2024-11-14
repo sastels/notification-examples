@@ -31,7 +31,7 @@ class Program
         };
         var content = new StringContent(jsonObject.ToString(), Encoding.UTF8, "application/json");
 
-        client.DefaultRequestHeaders.Add("Authorization", "ApiKey " + config["API_KEY"]);
+        client.DefaultRequestHeaders.Add("Authorization", "ApiKey-v1 " + config["API_KEY"]);
 
         Console.WriteLine("Sending Email");
 
@@ -39,15 +39,9 @@ class Program
 
         Console.WriteLine("Sent!");
 
-
-
-
-
-
-
-
-        // var responseString = await response.Content.ReadAsStringAsync();
-        // Console.WriteLine("Response: " + responseString);
+        // Always check the response - we should have a 201
+        var responseString = await response.Content.ReadAsStringAsync();
+        Console.WriteLine("Response: " + responseString);
     }
 }
 
