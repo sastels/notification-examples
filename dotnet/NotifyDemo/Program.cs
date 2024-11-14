@@ -40,7 +40,9 @@ class Program
         Console.WriteLine("Sent!");
 
         // Always check the response - we should have a 201
+        var responseCode = response.StatusCode;
         var responseString = await response.Content.ReadAsStringAsync();
+        Console.WriteLine("Response Code: " + responseCode);
         Console.WriteLine("Response: " + responseString);
     }
 }

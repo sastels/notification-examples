@@ -11,7 +11,6 @@ load_dotenv()
 if __name__ == "__main__":
     
     hostname = "https://api.notification.canada.ca/"
-    hostname = "https://sja-test.free.beeceptor.com"
     
     data = {
            "email_address": "stephen.astels@cds-snc.ca",
