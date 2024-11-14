@@ -43,7 +43,8 @@ class Program
         var responseCode = response.StatusCode;
         var responseString = await response.Content.ReadAsStringAsync();
         Console.WriteLine("Response Code: " + responseCode);
-        Console.WriteLine("Response: " + responseString);
+        Console.WriteLine("Response:\n" + JToken.Parse(responseString).ToString());
+
     }
 }
 
