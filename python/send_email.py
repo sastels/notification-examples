@@ -1,7 +1,6 @@
 import os
 import requests
 import json
-import time
 
 from dotenv import load_dotenv
 
@@ -23,14 +22,13 @@ if __name__ == "__main__":
     
     response = requests.post(
         f"{hostname}/v2/notifications/email",
-        headers={"Authorization": f"ApiKey {os.getenv('API_KEY')}"},
+        headers={"Authorization": f"ApiKey-v1 {os.getenv('API_KEY')}"},
         json=data,
     )
 
-
-    # Always check the response
-    # print(f"responds status code: {response.status_code}")
-    # print(json.dumps(response.json(), indent=4, sort_keys=True))
+    # Always check the response - we should have a 201
+    print(f"responds status code: {response.status_code}")
+    print(json.dumps(response.json(), indent=4, sort_keys=True))
 
 
 
