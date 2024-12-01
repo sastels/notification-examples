@@ -1,5 +1,5 @@
 ## Usage
 
-- export `API_KEY` and `TEMPLATE_ID` to your environment
+- export `TEMPLATE_ID` and `API_KEY` to your environment
 - Run `dotnet run --project  NotifyDemo`
 

@@ -10,7 +10,7 @@ class Program
     {
         Console.WriteLine("\n\nNotify Demo\n\n");
 
-        // Read environment variables
+        // Read environment variables TEMPLATE_ID and API_KEY
         var config =
             new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
@@ -31,7 +31,7 @@ class Program
         };
         var content = new StringContent(jsonObject.ToString(), Encoding.UTF8, "application/json");
 
-        client.DefaultRequestHeaders.Add("Authorization", "ApiKey-v1 " + config["API_KEY"]);
+        client.DefaultRequestHeaders.Add("Authorization", "ApiKey " + config["API_KEY"]);
 
         Console.WriteLine("Sending Email");
 
@@ -39,11 +39,14 @@ class Program
 
         Console.WriteLine("Sent!");
 
+
+
+
         // Always check the response - we should have a 201
-        var responseCode = response.StatusCode;
-        var responseString = await response.Content.ReadAsStringAsync();
-        Console.WriteLine("Response Code: " + responseCode);
-        Console.WriteLine("Response:\n" + JToken.Parse(responseString).ToString());
+        // var responseCode = response.StatusCode;
+        // var responseString = await response.Content.ReadAsStringAsync();
+        // Console.WriteLine("Response Code: " + responseCode);
+        // Console.WriteLine("Response:\n" + JToken.Parse(responseString).ToString());
 
     }
 }
